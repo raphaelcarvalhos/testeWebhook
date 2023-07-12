@@ -19,7 +19,8 @@ namespace WebHookReceiver.Controllers
         public ActionResult preEmployeeMovedEventReceive([FromBody] JsonElement jsonData){
             // _messageBus.SendMessage(jsonData);
             Console.WriteLine(jsonData);
-            return Ok();
+            System.Diagnostics.Trace.WriteLine(jsonData);
+            return Ok("Recebido.");
         }
     }
 }
